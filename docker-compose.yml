@@ -12,7 +12,9 @@ services:
     volumes:
       - '/tmp/.X11-unix:/tmp/.X11-unix'
       - '/etc/localtime:/etc/localtime:ro'
-    image: 'nvcr.io/nvidia/isaac-sim:2021.2.0'
+      - '$PWD/robots:/isaac_hsr/robots'
+      - '$PWD/usd:/isaac_hsr/usd'
+    image: 'nvcr.io/nvidia/isaac-sim:2021.2.1'
     deploy:
       resources:
         reservations:
