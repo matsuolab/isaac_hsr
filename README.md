@@ -41,7 +41,7 @@ For more information, [see](https://docs.nvidia.com/datacenter/cloud-native/cont
 Follow the steps in [Generate Your NGC API Key](https://docs.nvidia.com/ngc/ngc-overview/index.html#generating-api-key).
 
 ```bash
-sudo docker login nvcr.io
+docker login nvcr.io
 ```
 
 For more information, [see](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/isaac-sim).
