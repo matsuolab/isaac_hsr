@@ -24,7 +24,7 @@ class BaseTask(tasks.BaseTask):
         self._hsr_robot_name = hsr_robot_name
         return
 
-    def set_robot(self) -> HSR():
+    def set_robot(self) -> HSR:
         if self._hsr_prim_path is None:
             self._hsr_prim_path = find_unique_string_name(
                 intitial_name='/World/WRS',
@@ -36,7 +36,4 @@ class BaseTask(tasks.BaseTask):
                 is_unique_fn=lambda x: not self.scene.object_exists(x)
             )
 
-        return HSR(
-            prim_path=self._hsr_prim_path,
-            name=self._hsr_robot_name
-        )
+        return

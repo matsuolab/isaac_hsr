@@ -3,14 +3,16 @@
     "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/python/lib/python3.7/site-packages",
     "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/exts/omni.isaac.kit/",
     "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/exts/omni.isaac.core/",
-    "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/extscore/omni.usd.libs",
     "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/plugins/bindings-python",
+    "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/extscore/omni.usd.libs",
+    "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/extscore/omni.kit.commands",
   ],
   "python.analysis.extraPaths": [
     "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/python/lib/python3.7/site-packages",
     "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/exts/omni.isaac.kit/",
     "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/exts/omni.isaac.core/",
-    "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/extscore/omni.usd.libs",
     "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/plugins/bindings-python",
+    "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/extscore/omni.usd.libs",
+    "/home/h6x_dev1/.local/share/ov/pkg/isaac_sim-2021.2.1/kit/extscore/omni.kit.commands",
   ],
 }
