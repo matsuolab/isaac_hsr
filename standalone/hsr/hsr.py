@@ -19,10 +19,10 @@ class HSR(Robot):
         position: Optional[np.ndarray] = None,
         orientation: Optional[np.ndarray] = None,
     ):
-        status, import_config = commands.execute(
+        _, import_config = commands.execute(
             "URDFCreateImportConfig")
         import_config.merge_fixed_joints = False
-        import_config.fix_base = True
+        import_config.fix_base = False
         import_config.make_default_prim = True
         import_config.create_physics_scene = True
         commands.execute(
