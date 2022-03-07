@@ -26,7 +26,7 @@ import numpy as np
 # Load project root
 project_root_path = Path(__file__).parent.parent.absolute()
 urdf_path = project_root_path / "robots" / "hsr" / "urdf" / "hsrb4s.urdf"
-HSR(urdf_path=str(urdf_path), name="my_hsr")
+HSR(urdf_path=str(urdf_path), name="my_hsr", )
 
 # Locate /Isaac folder on nucleus server to load environment and robot stages
 result, _nucleus_path = nucleus.find_nucleus_server()
@@ -40,7 +40,6 @@ viewports.set_camera_view(eye=np.array([120, 120, 80]), target=np.array([0, 0, 5
 
 # Loading the simple_room environment
 stage.add_reference_to_stage(_nucleus_path + BACKGROUND_USD_PATH, BACKGROUND_STAGE_PATH)
-
 stage.add_reference_to_stage(_nucleus_path + BACKGROUND_USD_PATH, BACKGROUND_STAGE_PATH)
 
 
