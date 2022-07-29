@@ -14,7 +14,7 @@ services:
       - '/etc/localtime:/etc/localtime:ro'
       - '$PWD/robots:/isaac_hsr/robots'
       - '$PWD/usd:/isaac_hsr/usd'
-    image: 'nvcr.io/nvidia/isaac-sim:2021.2.1'
+    image: 'nvcr.io/nvidia/isaac-sim:2022.1.0'
     deploy:
       resources:
         reservations:
