@@ -1,0 +1,18 @@
+material WRS/WoodFloor
+{
+  receive_shadows on
+
+  technique
+  {
+    pass
+    {
+      ambient 0.8 0.8 0.8 1.000000
+
+      texture_unit
+      {
+        texture photos_2015_09_18_fst_765b3qqmm4v.jpg
+        scale 0.2 0.2
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_053_mini_soccer_ball'>
+    <link name='body'>
+      <inertial>
+        <mass>0.123</mass>
+        <pose>-0.00591259143145 0.0115305618014 0.0613155533905 0 0 0</pose>
+        <inertia>
+          <ixx>0.00019528110826</ixx>
+          <ixy>1.22782118378e-06</ixy>
+          <ixz>2.08950715463e-06</ixz>
+          <iyy>0.000195681378984</iyy>
+          <iyz>4.26617823389e-06</iyz>
+          <izz>0.000195587066226</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_053_mini_soccer_ball_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_053_mini_soccer_ball/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_053_mini_soccer_ball_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_053_mini_soccer_ball/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

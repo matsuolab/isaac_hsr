@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="wrc_tray">
+    <static>true</static>
+    <link name="link">
+      <inertial>
+        <mass>1.0</mass>
+      </inertial>
+      <collision name="bottom">
+        <pose>0 0 0.002 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.36 0.38 0.004</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="bottom_v">
+        <pose>0 0 0.002 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.285 0.37 0.004</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="front">
+        <pose>0 0.185 0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.285 0.004 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="front_v">
+        <pose>0 0.185 0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.285 0.004 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="back">
+        <pose>0 -0.185 0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.285 0.004 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="back_v">
+        <pose>0 -0.185 0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.285 0.004 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="left">
+        <pose>0.1425 0 0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.004 0.37 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_v">
+        <pose>0.1425 0 0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.004 0.37 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="right">
+        <pose>-0.1425 0 0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.004 0.37 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_v">
+        <pose>-0.1425 0 0.01 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.004 0.37 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

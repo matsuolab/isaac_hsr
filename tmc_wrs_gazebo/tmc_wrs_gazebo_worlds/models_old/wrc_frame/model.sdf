@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="wrc_frame">
+    <static>true</static>
+    <link name="link">
+      <inertial>
+        <mass>1.0</mass>
+      </inertial>
+      <collision name="wall_back">
+        <pose>0.6 2.0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>4.8 0.1 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="wall_back_v">
+        <pose>0.6 2.0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>4.8 0.1 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="wall_front">
+        <pose>0.0 -2.0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.0 0.1 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="wall_front_v">
+        <pose>0.0 -2.0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>6.0 0.1 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="wall_left">
+        <pose>-3.0 0.0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 4.1 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="wall_left_v">
+        <pose>-3.0 0.0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 4.1 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="wall_right">
+        <pose>3.0 0.0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 4.1 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="wall_right_v">
+        <pose>3.0 0.0 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 4.1 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="wall_center">
+        <pose>0.0 0.6 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 2.8 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="wall_center_v">
+        <pose>0.0 0.6 0.3 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 2.8 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Gray</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

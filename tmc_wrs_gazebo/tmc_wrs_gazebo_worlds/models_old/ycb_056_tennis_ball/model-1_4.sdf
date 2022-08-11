@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_056_tennis_ball'>
+    <link name='body'>
+      <inertial>
+        <mass>0.058</mass>
+        <pose>0.00823323973626 -0.0441924263824 0.0328866204869 0 0 0</pose>
+        <inertia>
+          <ixx>2.58584279109e-05</ixx>
+          <ixy>1.89792860915e-10</ixy>
+          <ixz>-5.62637608871e-08</ixz>
+          <iyy>2.58462737538e-05</iyy>
+          <iyz>-2.61472881057e-08</iyz>
+          <izz>2.59187047722e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_056_tennis_ball_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_056_tennis_ball/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_056_tennis_ball_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_056_tennis_ball/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>
