@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_002_master_chef_can'>
+    <link name='body'>
+      <inertial>
+        <mass>0.414</mass>
+        <pose>-0.0170707295146 -0.00976285584694 0.0705842198739 0 0 0</pose>
+        <inertia>
+          <ixx>0.000889575538371</ixx>
+          <ixy>3.88357680854e-07</ixy>
+          <ixz>-5.51685049938e-07</ixz>
+          <iyy>0.000887763115987</iyy>
+          <iyz>1.89411095625e-07</iyz>
+          <izz>0.000518515580785</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_002_master_chef_can_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_002_master_chef_can/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_002_master_chef_can_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_002_master_chef_can/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

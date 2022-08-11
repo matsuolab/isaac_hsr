@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_027_skillet'>
+    <link name='body'>
+      <inertial>
+        <mass>0.95</mass>
+        <pose>-0.00676357282935 0.0245110887492 0.0383163513123 0 0 0</pose>
+        <inertia>
+          <ixx>0.0103237057941</ixx>
+          <ixy>0.000765923528829</ixy>
+          <ixz>-0.000298767107818</ixz>
+          <iyy>0.00603076949646</iyy>
+          <iyz>0.00066794451963</iyz>
+          <izz>0.0143210435031</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_027_skillet_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_027_skillet/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_027_skillet_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_027_skillet/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

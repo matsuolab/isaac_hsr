@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_043_phillips_screwdriver'>
+    <link name='body'>
+      <inertial>
+        <mass>0.097</mass>
+        <pose>0.00266262806429 0.0222238696082 0.0163722755715 0 0 0</pose>
+        <inertia>
+          <ixx>3.63140479329e-05</ixx>
+          <ixy>-5.04552306837e-05</ixy>
+          <ixz>-4.89317331555e-06</ixz>
+          <iyy>0.000111538182419</iyy>
+          <iyz>-2.48523745614e-06</iyz>
+          <izz>0.000136643781826</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_043_phillips_screwdriver_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_043_phillips_screwdriver/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_043_phillips_screwdriver_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_043_phillips_screwdriver/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

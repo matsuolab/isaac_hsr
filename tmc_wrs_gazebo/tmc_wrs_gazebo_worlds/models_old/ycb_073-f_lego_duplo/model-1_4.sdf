@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_073-f_lego_duplo'>
+    <link name='body'>
+      <inertial>
+        <mass>0.0417809308719</mass>
+        <pose>-0.0283036531267 -0.066461090192 0.0236072058656 0 0 0</pose>
+        <inertia>
+          <ixx>7.97892885422e-06</ixx>
+          <ixy>-1.27195776216e-09</ixy>
+          <ixz>4.12030156663e-08</ixz>
+          <iyy>7.96782495994e-06</iyy>
+          <iyz>2.24204294506e-08</iyz>
+          <izz>7.6904956139e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_073-f_lego_duplo_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_073-f_lego_duplo/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_073-f_lego_duplo_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_073-f_lego_duplo/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

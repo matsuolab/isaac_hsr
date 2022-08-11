@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_063-a_marbles'>
+    <link name='body'>
+      <inertial>
+        <mass>0.147014220949</mass>
+        <pose>-0.00275002120953 0.0291653336368 0.0221539240772 0 0 0</pose>
+        <inertia>
+          <ixx>6.38004707251e-05</ixx>
+          <ixy>-6.81762784831e-07</ixy>
+          <ixz>-1.20609896884e-06</ixz>
+          <iyy>6.58418109571e-05</iyy>
+          <iyz>-5.30422053744e-06</iyz>
+          <izz>7.69249171026e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_063-a_marbles_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_063-a_marbles/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_063-a_marbles_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_063-a_marbles/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>
