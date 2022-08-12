@@ -1,0 +1,152 @@
+<!--
+Copyright (c) 2019, Toyota Motor Corporation
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+ * Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of Toyota Motor Corporation nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
+<launch>
+  <arg name="namespace" default="/hsrb"/>
+  <arg name="debug" default="false"/>
+  <arg name="gui" default="true" />
+  <arg name="rviz" default="false"/>
+  <arg name="gazebo_visualization" default="false" />
+  <arg name="use_laser_odom" default="true" />
+  <arg name="paused" default="true" />
+  <arg name="fast_physics" default="false" />
+  <arg name="highrtf" default="false" />
+  <arg name="robot_name" default="hsrb" />
+  <arg name="use_camera_control" default="false" />
+  <arg name="seed" default="1" />
+
+  <arg name="map" default="$(find tmc_wrs_gazebo_worlds)/maps/wrs2020/map.yaml" />
+
+  <arg unless="$(arg fast_physics)" name="world_suffix" value=""/>
+  <arg     if="$(arg fast_physics)" name="world_suffix" value="_fast"/>
+  <arg unless="$(arg highrtf)" name="world_suffix2" value=""/>
+  <arg     if="$(arg highrtf)" name="world_suffix2" value="_highrtf"/>
+  <arg name="world_name" default="$(find tmc_wrs_gazebo_worlds)/worlds/wrs2020$(arg world_suffix)$(arg world_suffix2).world" />
+
+  <arg name="robot_pos" default="-x -2.1 -y 1.2 -z 0 -Y -1.57" />
+
+  <param name="/use_sim_time" value="true" />
+
+  <!-- world -->
+  <include file="$(find hsrb_gazebo_bringup)/launch/hsrb_empty_world.launch" >
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="fast_physics" value="$(arg fast_physics)" />
+    <arg name="gazebo_visualization" value="$(arg gazebo_visualization)" />
+    <arg name="use_laser_odom" value="$(arg use_laser_odom)" />
+    <arg name="paused" value="$(arg paused)" />
+    <arg name="world_name" value="$(arg world_name)" />
+    <arg name="robot_pos" value="$(arg robot_pos)" />
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="robot_name" value="$(arg robot_name)" />
+  </include>
+
+  <!-- moveit-->
+  <include file="$(find hsrb_moveit_config)/launch/hsrb_demo_with_controller.launch">
+    <arg name="use_gui" value="false"/>
+    <arg name="load_robot_description" value="false"/>
+  </include>
+
+  <!-- rosnav -->
+  <include file="$(find hsrb_rosnav_config)/launch/hsrb_nav.launch">
+    <arg name="map_file" value="$(arg map)"/>
+  </include>
+
+  <!-- pose_to_odom -->
+  <node pkg="topic_tools" type="relay" name="odom_relay"
+        args="/hsrb/laser_odom /hsrb/odom" if="$(arg use_laser_odom)" />
+  <node pkg="topic_tools" type="relay" name="odom_relay"
+        args="/hsrb/wheel_odom /hsrb/odom" unless="$(arg use_laser_odom)" />
+
+
+  <!-- rviz-->
+  <node name="rviz" pkg="rviz" type="rviz"
+    args="-d $(find tmc_wrs_gazebo_launch)/config/hsr.rviz" if="$(arg rviz)"/>
+
+  <!-- common processes for the challenge task (evaluate and save the score, etc.) -->
+  <!--
+  <include file="$(find tmc_wrs_gazebo_launch)/launch/common.launch" />
+  <group if="$(arg use_camera_control)">
+    <node pkg="hsrb_gazebo_task_evaluators" type="hhcc_tidy_camera_controller" name="camera_controller" output="screen">
+    </node>
+  </group>
+  <node pkg="hsrb_gazebo_task_evaluators" type="object_in_box_detector" name="toys_in_trofase_detector" output="screen">
+    <param name="box_name" value="trofase" />
+    <rosparam param="box_size">[0.35, 0.21, 0.25]</rosparam>
+    <rosparam param="box_pose">[0, 0, 0.125]</rosparam>
+    <rosparam param="object_names">['toy*']</rosparam>
+  </node>
+  <node pkg="hsrb_gazebo_task_evaluators" type="object_in_box_detector" name="dishes_in_sink_detector" output="screen">
+    <param name="box_name" value="sink::dishwasher_link" />
+    <rosparam param="box_size">[0.47, 0.36, 0.32]</rosparam>
+    <rosparam param="box_pose">[-0.315, 0, 0.31]</rosparam>
+    <rosparam param="object_names">['dish*']</rosparam>
+    <rosparam param="target_axes">[0, 1, 0]</rosparam>
+    <rosparam param="allow_degree">45</rosparam>
+    <rosparam param="both_direction">1</rosparam>
+  </node>
+  <node pkg="hsrb_gazebo_task_evaluators" type="object_in_box_detector" name="teacups_in_sink_detector" output="screen">
+    <param name="box_name" value="sink::dishwasher_link" />
+    <rosparam param="box_size">[0.47, 0.36, 0.32]</rosparam>
+    <rosparam param="box_pose">[-0.315, 0, 0.31]</rosparam>
+    <rosparam param="object_names">['teacup*']</rosparam>
+    <rosparam param="target_axes">[0, 0, -1]</rosparam>
+  </node>
+  <node pkg="hsrb_gazebo_task_evaluators" type="object_in_box_detector" name="cellphone_in_wagon_detector" output="screen">
+    <param name="box_name" value="wagon::top_center_drawer_link" />
+    <rosparam param="box_size">[0.40, 0.456, 0.30]</rosparam>
+    <rosparam param="box_pose">[-0.2, 0.608, 0.9]</rosparam>
+    <rosparam param="object_names">['cellphone']</rosparam>
+    <rosparam param="object_axes">[1, 0, 0]</rosparam>
+    <rosparam param="target_axes">[1, 0, 0]</rosparam>
+    <rosparam param="both_direction">1</rosparam>
+    <rosparam param="target_position">[-0.2, 0.608, 0.757]</rosparam>
+  </node>
+  <node pkg="hsrb_gazebo_task_evaluators" type="object_in_box_detector" name="remocon_in_wagon_detector" output="screen">
+    <param name="box_name" value="wagon::top_center_drawer_link" />
+    <rosparam param="box_size">[0.40, 0.456, 0.30]</rosparam>
+    <rosparam param="box_pose">[-0.2, 0.608, 0.9]</rosparam>
+    <rosparam param="object_names">['remocon']</rosparam>
+    <rosparam param="object_axes">[1, 0, 0]</rosparam>
+    <rosparam param="target_axes">[1, 0, 0]</rosparam>
+    <rosparam param="both_direction">1</rosparam>
+    <rosparam param="target_position">[-0.2, 0.508, 0.757]</rosparam>
+  </node>
+  <node pkg="hsrb_gazebo_task_evaluators" type="object_in_box_detector" name="stapler_in_wagon_detector" output="screen">
+    <param name="box_name" value="wagon::top_center_drawer_link" />
+    <rosparam param="box_size">[0.40, 0.456, 0.30]</rosparam>
+    <rosparam param="box_pose">[-0.2, 0.608, 0.9]</rosparam>
+    <rosparam param="object_names">['stapler']</rosparam>
+    <rosparam param="object_axes">[0, 1, 0]</rosparam>
+    <rosparam param="target_axes">[1, 0, 0]</rosparam>
+    <rosparam param="both_direction">1</rosparam>
+    <rosparam param="target_position">[-0.2, 0.708, 0.757]</rosparam>
+  </node>
+-->
+  <!-- spawn objects to the world -->
+  <node pkg="tmc_wrs_gazebo_worlds" type="spawn_objects" name="spawn_objects" args="--seed $(arg seed)" output="screen" />
+</launch>

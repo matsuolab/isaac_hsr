@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_005_tomato_soup_can'>
+    <link name='body'>
+      <inertial>
+        <mass>0.349</mass>
+        <pose>-0.00934209937509 0.0842242445057 0.0500258328067 0 0 0</pose>
+        <inertia>
+          <ixx>0.000349926494745</ixx>
+          <ixy>-1.46031435577e-07</ixy>
+          <ixz>-8.09615684957e-07</ixz>
+          <iyy>0.000352671686652</iyy>
+          <iyz>3.54459054371e-07</iyz>
+          <izz>0.000191836705141</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_005_tomato_soup_can_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_005_tomato_soup_can/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_005_tomato_soup_can_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_005_tomato_soup_can/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

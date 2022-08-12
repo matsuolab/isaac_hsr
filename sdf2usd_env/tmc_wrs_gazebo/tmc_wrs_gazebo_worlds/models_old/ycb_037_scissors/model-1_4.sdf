@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_037_scissors'>
+    <link name='body'>
+      <inertial>
+        <mass>0.082</mass>
+        <pose>0.014591521705 0.0031621363902 0.00740067431642 0 0 0</pose>
+        <inertia>
+          <ixx>0.000115606742285</ixx>
+          <ixy>-2.75484253168e-05</ixy>
+          <ixz>-4.74821989584e-07</ixz>
+          <iyy>3.85017848178e-05</iyy>
+          <iyz>-5.17757427406e-07</iyz>
+          <izz>0.000152325713996</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_037_scissors_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_037_scissors/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_037_scissors_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_037_scissors/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

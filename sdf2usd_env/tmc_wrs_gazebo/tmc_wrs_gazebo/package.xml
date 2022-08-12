@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>tmc_wrs_gazebo</name>
+  <version>1.0.0</version>
+  <description>tmc_wrs_gazebo meta package</description>
+
+  <maintainer email="xr-hsr-support@mail.toyota.co.jp">HSR Support</maintainer>
+
+  <license>BSD 3-clause Clear License</license>
+
+  <author>Yosuke Matsusaka</author>
+  <author>Nobuyuki Matsuno</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>tmc_wrs_launch</run_depend>
+  <run_depend>tmc_wrs_worlds</run_depend>
+  <export>
+    <metapackage/>
+  </export>
+</package>

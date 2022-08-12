@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='trofast'>
+    <link name='body'>
+      <inertial>
+        <pose>0 0 0.115 0 0 0</pose>
+        <mass>0.54</mass>
+        <inertia>
+          <ixx>0.0064</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0103</iyy>
+          <iyz>0</iyz>
+          <izz>0.012</izz>
+        </inertia>
+      </inertial>
+      <visual name='trofast'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://trofast/meshes/trofast.stl</uri>
+          </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Orange</name>
+            </script>
+          </material>
+      </visual>
+      <collision name='collision_trofast'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://trofast/meshes/trofast.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+      </collision>
+    </link>
+  </model>
+</sdf>

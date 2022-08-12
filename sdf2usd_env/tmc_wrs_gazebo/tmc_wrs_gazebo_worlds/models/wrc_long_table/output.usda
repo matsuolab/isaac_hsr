@@ -1,0 +1,426 @@
+#usda 1.0
+
+def Xform "wrc_long_table"
+{
+    float3 xformOp:rotateXYZ = (0, -0, 0)
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+    def Xform "link"
+    {
+        float3 xformOp:rotateXYZ = (0, -0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Xform "top_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0, 0.39)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/Material_0>
+                double size = 1
+                float3 xformOp:scale = (1.2, 0.4, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "leg1_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.59, 0.19, 0.185)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/Material_1>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.02, 0.4)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "leg2_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (-0.59, 0.19, 0.185)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/Material_2>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.02, 0.4)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "leg3_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.59, -0.19, 0.185)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/Material_3>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.02, 0.4)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "leg4_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (-0.59, -0.19, 0.185)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/Material_4>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.02, 0.4)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "side_panel1_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.575, 0, 0.32)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/Material_5>
+                double size = 1
+                float3 xformOp:scale = (0.01, 0.4, 0.04)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "side_panel2_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (-0.575, 0, 0.32)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/Material_6>
+                double size = 1
+                float3 xformOp:scale = (0.01, 0.4, 0.04)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "bar1_v"
+        {
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, 0.19, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry"
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/Material_7>
+                double radius = 0.01
+            }
+        }
+
+        def Xform "bar2_v"
+        {
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, 0.08, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry"
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/Material_8>
+                double radius = 0.01
+            }
+        }
+
+        def Xform "bar3_v"
+        {
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, 0, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry"
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/Material_9>
+                double radius = 0.01
+            }
+        }
+
+        def Xform "bar4_v"
+        {
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, -0.09, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry"
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/Material_10>
+                double radius = 0.01
+            }
+        }
+
+        def Xform "bar5_v"
+        {
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, -0.18, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry"
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/Material_11>
+                double radius = 0.01
+            }
+        }
+
+        def Xform "top"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0, 0.39)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/MaterialPhysics_0>
+                double size = 1
+                float3 xformOp:scale = (1.2, 0.4, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "leg1"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.59, 0.19, 0.185)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/MaterialPhysics_1>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.02, 0.4)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "leg2"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (-0.59, 0.19, 0.185)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/MaterialPhysics_2>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.02, 0.4)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "leg3"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.59, -0.19, 0.185)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/MaterialPhysics_3>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.02, 0.4)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "leg4"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (-0.59, -0.19, 0.185)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/MaterialPhysics_4>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.02, 0.4)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "side_panel1"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.575, 0, 0.32)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/MaterialPhysics_5>
+                double size = 1
+                float3 xformOp:scale = (0.01, 0.4, 0.04)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "side_panel2"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (-0.575, 0, 0.32)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </Looks/MaterialPhysics_6>
+                double size = 1
+                float3 xformOp:scale = (0.01, 0.4, 0.04)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "bar1"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, 0.2, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/MaterialPhysics_7>
+                double radius = 0.01
+            }
+        }
+
+        def Xform "bar2"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, 0.08, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/MaterialPhysics_8>
+                double radius = 0.01
+            }
+        }
+
+        def Xform "bar3"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, 0, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/MaterialPhysics_9>
+                double radius = 0.01
+            }
+        }
+
+        def Xform "bar4"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, -0.08, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/MaterialPhysics_10>
+                double radius = 0.01
+            }
+        }
+
+        def Xform "bar5"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, 89.95438, 0)
+            double3 xformOp:translate = (0, -0.18, 0.29)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cylinder "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.01, -0.01, -0.58), (0.01, 0.01, 0.58)]
+                double height = 1.16
+                rel material:binding = </Looks/MaterialPhysics_11>
+                double radius = 0.01
+            }
+        }
+    }
+}
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_018_plum'>
+    <link name='body'>
+      <inertial>
+        <mass>0.025</mass>
+        <pose>-0.00774261128048 0.0194922316554 0.0237203375324 0 0 0</pose>
+        <inertia>
+          <ixx>7.29015772747e-06</ixx>
+          <ixy>-8.35146906738e-08</ixy>
+          <ixz>-6.09416095178e-08</ixz>
+          <iyy>7.71168505326e-06</iyy>
+          <iyz>1.30653911736e-07</iyz>
+          <izz>7.75759371421e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_018_plum_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_018_plum/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_018_plum_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_018_plum/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>
