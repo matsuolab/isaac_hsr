@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  kokhayas_workspace:
+    build: .
+    tty: true
+    stdin_open: true
+    command: tail -f /dev/null
+    image: kokhayas_image
+    container_name: kokhayas_container
+    volumes:
+      - ./:/root/kokhayas_workspace

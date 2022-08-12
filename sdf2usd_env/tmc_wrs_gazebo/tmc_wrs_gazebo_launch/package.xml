@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+  <name>tmc_wrs_gazebo_launch</name>
+  <version>1.0.0</version>
+  <description>Launch files for WRS2020</description>
+
+  <maintainer email="xr-hsr-support@mail.toyota.co.jp">HSR Support</maintainer>
+
+  <license>BSD 3-clause Clear License</license>
+
+  <author>Yosuke Matsusaka</author>
+  <author>Nobuyuki Matsuno</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>roslaunch</run_depend>
+
+  <run_depend>hsrb_rosnav_config</run_depend>
+  <run_depend>hsrb_moveit_config</run_depend>
+
+  <run_depend>hsrb_gazebo_launch</run_depend>
+  <run_depend>hsrb_gazebo_task_evaluators</run_depend>
+  <run_depend>tmc_wrs_gazebo_worlds</run_depend>
+  <run_depend>rosbag</run_depend>
+  <run_depend>rviz</run_depend>
+
+</package>

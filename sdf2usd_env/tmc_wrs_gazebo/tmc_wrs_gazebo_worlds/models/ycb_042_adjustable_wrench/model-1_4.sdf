@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_042_adjustable_wrench'>
+    <link name='body'>
+      <inertial>
+        <mass>0.252</mass>
+        <pose>0.0145014626744 -0.04966484184 0.00425078099655 0 0 0</pose>
+        <inertia>
+          <ixx>0.000428579037192</ixx>
+          <ixy>0.000208257627943</ixy>
+          <ixz>-3.64564762384e-06</ixz>
+          <iyy>0.000170213921775</iyy>
+          <iyz>9.87179872447e-06</iyz>
+          <izz>0.000595765701955</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_042_adjustable_wrench_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_042_adjustable_wrench/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_042_adjustable_wrench_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_042_adjustable_wrench/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

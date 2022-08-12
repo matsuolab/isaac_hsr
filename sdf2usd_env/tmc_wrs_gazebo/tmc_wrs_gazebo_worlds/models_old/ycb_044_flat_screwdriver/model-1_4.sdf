@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_044_flat_screwdriver'>
+    <link name='body'>
+      <inertial>
+        <mass>0.0984</mass>
+        <pose>0.0232283513379 -0.0227055605747 0.0161798216746 0 0 0</pose>
+        <inertia>
+          <ixx>7.07771623195e-05</ixx>
+          <ixy>6.18555936747e-05</ixy>
+          <ixz>-3.4193858639e-06</ixz>
+          <iyy>7.53574424005e-05</iyy>
+          <iyz>3.3082300637e-06</iyz>
+          <izz>0.000134805756702</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_044_flat_screwdriver_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_044_flat_screwdriver/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_044_flat_screwdriver_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_044_flat_screwdriver/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

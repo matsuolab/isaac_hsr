@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_022_windex_bottle'>
+    <link name='body'>
+      <inertial>
+        <mass>1.022</mass>
+        <pose>0.0139425642907 0.00843004395294 0.102368538691 0 0 0</pose>
+        <inertia>
+          <ixx>0.00498803796691</ixx>
+          <ixy>-4.43347650441e-05</ixy>
+          <ixz>1.07219881226e-05</ixz>
+          <iyy>0.00485964808771</iyy>
+          <iyz>0.000102701885388</iyz>
+          <izz>0.000731589299807</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_022_windex_bottle_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_022_windex_bottle/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_022_windex_bottle_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_022_windex_bottle/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

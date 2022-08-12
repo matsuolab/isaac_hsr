@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_070-b_colored_wood_blocks'>
+    <link name='body'>
+      <inertial>
+        <mass>0.0221511880653</mass>
+        <pose>-0.0188212639886 -0.00881855990012 0.0126334338273 0 0 0</pose>
+        <inertia>
+          <ixx>2.38935857923e-06</ixx>
+          <ixy>-1.67754129002e-09</ixy>
+          <ixz>-1.01671180471e-08</ixz>
+          <iyy>2.38095232944e-06</iyy>
+          <iyz>9.03271363311e-09</iyz>
+          <izz>2.37886887489e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_070-b_colored_wood_blocks_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_070-b_colored_wood_blocks/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_070-b_colored_wood_blocks_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_070-b_colored_wood_blocks/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,2549 @@
+#usda 1.0
+
+def Xform "wrc_stair_like_drawer"
+{
+    float3 xformOp:rotateXYZ = (0, -0, 0)
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+    def Xform "link"
+    {
+        float3 xformOp:rotateXYZ = (0, -0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Xform "slit1_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.495, 0.21)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_0>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.02, 0.42)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit1_1_left_low_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.48, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_1>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit1_1_left_high_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.48, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_2>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit1_1_right_low_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.18, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_3>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit1_1_right_high_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.18, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_4>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "slit2_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.165, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_5>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.02, 0.68)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_1_left_low_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.15, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_6>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_1_left_high_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.15, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_7>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_1_right_low_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.15, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_8>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_1_right_high_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.15, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_9>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_2_left_low_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.15, 0.56)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_10>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_2_left_high_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.15, 0.6)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_11>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_2_right_low_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.15, 0.56)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_12>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_2_right_high_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.15, 0.6)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_13>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "slit3_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.165, 0.47)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_14>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.02, 0.94)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "slit4_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.495, 0.47)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_15>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.02, 0.94)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top1_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.33, 0.41)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_16>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.33, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top1_front_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.21, -0.33, 0.37)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_17>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.33, 0.06)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top2_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0, 0.67)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_18>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.33, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top2_front_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.21, 0, 0.63)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_19>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.33, 0.06)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top3_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.33, 0.93)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_20>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.33, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top3_front_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.21, 0.33, 0.89)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_21>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.33, 0.06)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "bottom_v"
+        {
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0, 0.06)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry"
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/Material_22>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.99, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "slit1"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.495, 0.21)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_0>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.02, 0.42)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit1_1_left_low"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.48, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_1>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit1_1_left_high"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.48, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_2>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit1_1_right_low"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.18, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_3>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit1_1_right_high"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.18, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_4>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "slit2"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.165, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_5>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.02, 0.68)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_1_left_low"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.15, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_6>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_1_left_high"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.15, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_7>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_1_right_low"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.15, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_8>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_1_right_high"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.15, 0.34)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_9>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_2_left_low"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.15, 0.56)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_10>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_2_left_high"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.15, 0.6)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_11>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_2_right_low"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.15, 0.56)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_12>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "holder_slit2_2_right_high"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.15, 0.6)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_13>
+                double size = 1
+                float3 xformOp:scale = (0.42, 0.02, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "slit3"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.165, 0.47)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_14>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.02, 0.94)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "slit4"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.495, 0.47)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_15>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.02, 0.94)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top1"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, -0.33, 0.41)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_16>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.33, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top1_front"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.21, -0.33, 0.37)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_17>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.33, 0.06)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top2"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0, 0.67)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_18>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.33, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top2_front"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.21, 0, 0.63)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_19>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.33, 0.06)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top3"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0.33, 0.93)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_20>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.33, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "top3_front"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0.21, 0.33, 0.89)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_21>
+                double size = 1
+                float3 xformOp:scale = (0.02, 0.33, 0.06)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+
+        def Xform "bottom"
+        {
+            uniform token purpose = "guide"
+            float3 xformOp:rotateXYZ = (0, -0, 0)
+            double3 xformOp:translate = (0, 0, 0.06)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Cube "geometry" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </wrc_stair_like_drawer/Looks/MaterialPhysics_22>
+                double size = 1
+                float3 xformOp:scale = (0.44, 0.99, 0.02)
+                uniform token[] xformOpOrder = ["xformOp:scale"]
+            }
+        }
+    }
+
+    def Scope "Looks"
+    {
+        def Material "Material_0"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_0/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_0/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_0/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_1"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_1/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_1/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_1/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_2"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_2/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_2/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_2/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_3"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_3/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_3/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_3/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_4"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_4/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_4/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_4/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_5"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_5/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_5/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_5/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_6"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_6/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_6/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_6/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_7"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_7/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_7/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_7/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_8"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_8/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_8/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_8/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_9"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_9/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_9/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_9/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_10"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_10/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_10/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_10/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_11"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_11/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_11/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_11/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_12"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_12/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_12/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_12/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_13"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_13/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_13/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_13/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_14"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_14/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_14/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_14/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_15"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_15/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_15/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_15/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_16"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_16/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_16/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_16/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_17"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_17/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_17/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_17/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_18"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_18/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_18/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_18/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_19"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_19/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_19/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_19/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_20"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_20/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_20/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_20/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_21"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_21/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_21/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_21/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "Material_22"
+        {
+            token outputs:mdl:displacement.connect = </wrc_stair_like_drawer/Looks/Material_22/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </wrc_stair_like_drawer/Looks/Material_22/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </wrc_stair_like_drawer/Looks/Material_22/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0, 0, 0) (
+                    customData = {
+                        float3 default = (0.2, 0.2, 0.2)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Albedo"
+                    displayName = "Base Color"
+                    doc = "This is the base color"
+                    hidden = false
+                )
+                color3f inputs:emissive_color = (0, 0, 0) (
+                    customData = {
+                        float3 default = (1, 0.1, 0.1)
+                        dictionary range = {
+                            float3 max = (100000, 100000, 100000)
+                            float3 min = (0, 0, 0)
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Color"
+                    doc = "The emission color"
+                    hidden = false
+                )
+                float inputs:emissive_intensity = 1 (
+                    customData = {
+                        float default = 40
+                        dictionary range = {
+                            int max = 100000
+                            int min = 0
+                        }
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Emissive Intensity"
+                    doc = "Intensity of the emission"
+                    hidden = false
+                )
+                bool inputs:enable_emission = 1 (
+                    customData = {
+                        bool default = 0
+                    }
+                    displayGroup = "Emissive"
+                    displayName = "Enable Emission"
+                    doc = "Enables the emission of light from the material"
+                    hidden = false
+                )
+                token outputs:out
+            }
+        }
+
+        def Material "MaterialPhysics_0" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_1" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_2" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_3" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_4" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_5" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_6" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_7" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_8" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_9" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_10" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_11" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_12" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_13" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_14" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_15" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_16" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_17" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_18" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_19" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_20" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_21" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+
+        def Material "MaterialPhysics_22" (
+            apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+        )
+        {
+            float physics:density = 1
+            float physics:dynamicFriction = 1
+            float physics:restitution = 1
+            float physics:staticFriction = 1
+            token physXMaterial:frictionCombineMode = "average"
+            token physXMaterial:restitutionCombineMode = "average"
+        }
+    }
+}
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_004_sugar_box'>
+    <link name='body'>
+      <inertial>
+        <mass>0.514</mass>
+        <pose>-0.00769841553658 -0.0170781631302 0.0860238139839 0 0 0</pose>
+        <inertia>
+          <ixx>0.00162065429869</ixx>
+          <ixy>-9.49129245602e-06</ixy>
+          <ixz>4.81821825212e-05</ixz>
+          <iyy>0.00135931207958</iyy>
+          <iyz>-1.64061737271e-05</iyz>
+          <izz>0.000408012196346</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_004_sugar_box_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_004_sugar_box/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_004_sugar_box_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_004_sugar_box/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

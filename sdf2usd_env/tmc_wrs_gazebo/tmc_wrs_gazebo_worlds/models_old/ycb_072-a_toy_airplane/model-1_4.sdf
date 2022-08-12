@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_072-a_toy_airplane'>
+    <link name='body'>
+      <inertial>
+        <mass>0.57</mass>
+        <pose>0.0357247570654 0.0308073991106 0.0909231453241 0 0 0</pose>
+        <inertia>
+          <ixx>0.00288949931189</ixx>
+          <ixy>5.63447600471e-05</ixy>
+          <ixz>7.58527217051e-06</ixz>
+          <iyy>0.00199606733571</iyy>
+          <iyz>-0.000227239059522</iyz>
+          <izz>0.0034033262607</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_072-a_toy_airplane_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_072-a_toy_airplane/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_072-a_toy_airplane_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_072-a_toy_airplane/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

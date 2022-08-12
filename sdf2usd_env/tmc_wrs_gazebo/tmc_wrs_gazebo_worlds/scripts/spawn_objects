@@ -1,0 +1,330 @@
+#!/usr/bin/env python
+# Copyright (c) 2019 TOYOTA MOTOR CORPORATION
+# All rights reserved.
+
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+
+#  * Redistributions of source code must retain the above copyright notice,
+#  this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above copyright
+#  notice, this list of conditions and the following disclaimer in the
+#  documentation and/or other materials provided with the distribution.
+#  * Neither the name of Toyota Motor Corporation nor the names of its
+#  contributors may be used to endorse or promote products derived from
+#  this software without specific prior written permission.
+
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+# LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+import random
+import math
+import numpy as np
+from scipy.spatial.distance import pdist
+import argparse
+
+import rospy
+import sys
+import os
+import time
+import string
+import warnings
+import re
+
+from gazebo_ros import gazebo_interface
+
+from gazebo_msgs.msg import *
+from gazebo_msgs.srv import *
+from std_srvs.srv import Empty
+from geometry_msgs.msg import Point, Pose, Quaternion, Twist, Wrench
+import tf.transformations as tft
+
+model_database_template = """<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://MODEL_NAME</uri>
+    </include>
+  </world>
+</sdf>"""
+
+task1_top_long_table = [
+    [-0.2, 0.7, 0.4],
+    [-0.45, -0.35, 0.4]
+]
+
+task1_top_tall_table = [
+    [-0.2, 1.35, 0.6],
+    [-0.45, 1.0, 0.6]
+]
+
+task1_floor = [
+    [-0.4, 1.35, 0.0],
+    [-1.0, -0.35, 0.0]
+]
+
+task2a_floor = [
+    [0.8, -0.85, 0.0],
+    [0, -1.9, 0.0]
+]
+
+task2_shelf_plate1 = [
+    [2.8, -0.7, 0.8],
+    [2.6, -1.3, 0.8]
+]
+
+task2_shelf_plate2 = [
+    [2.8, -0.7, 0.5],
+    [2.6, -1.3, 0.5]
+]
+
+food = {
+    "prefix": "food",
+    "items": [
+        "ycb_002_master_chef_can",   # Master chef coffee can
+        "ycb_003_cracker_box",       # Cheez-it cracker box
+        "ycb_004_sugar_box",         # Domino sugar box
+        "ycb_005_tomato_soup_can",   # Tomato soup can
+        "ycb_006_mustard_bottle",    # French's mustard bottle
+        "ycb_007_tuna_fish_can",     # Starkist tuna fish can
+        "ycb_008_pudding_box",       # Jell-o chocolate pudding box
+        "ycb_009_gelatin_box",       # Jell-o strawberry gelatin box
+        "ycb_010_potted_meat_can",   # Spam potted meat can
+        "ycb_011_banana",            # Plastic banana
+        "ycb_012_strawberry",        # Plastic strawberries
+        "ycb_013_apple",             # Plastic apple
+        "ycb_014_lemon",             # Plastic lemon
+        "ycb_015_peach",             # Plastic peach
+        "ycb_016_pear",              # Plastic pear
+        "ycb_017_orange",            # Plastic orange
+        "ycb_018_plum"               # Plastic plum
+    ]
+}
+
+kitchen_items = {
+    "prefix": "kitchenitem",
+    "items": [
+        "ycb_019_pitcher_base",      # Pitcher base
+        "ycb_021_bleach_cleanser",   # Srub cleanser bottle
+        "ycb_022_windex_bottle",     # Windex Spray bottle
+        "ycb_024_bowl",              # Bowl
+        "ycb_025_mug",               # Mug
+        "ycb_026_sponge",            # Scotch brite dobie sponge
+        "ycb_029_plate",             # Plate
+        "ycb_030_fork",              # Fork
+        "ycb_031_spoon",             # Spoon
+        "ycb_033_spatula"            # Spatula
+        # missing: Pitcher lid, Wine glass
+    ]
+}
+
+tools = {
+    "prefix": "tool",
+    "items": [
+        "ycb_038_padlock",          # Keys(from the Padlock)
+        "ycb_040_large_marker",     # Large marker
+        "ycb_050_medium_clamp",     # Medium clamp
+        "ycb_051_large_clamp",      # Large clamp
+        "ycb_052_extra_large_clamp" # Extra-large clamp
+        # missing: Small marker, Small clamp, Bolts, Nuts
+    ]
+}
+
+shape_items = {
+    "prefix": "shapeitem",
+    "items": [
+        "ycb_053_mini_soccer_ball",  # Mini soccer ball
+        "ycb_054_softball",          # Soft ball
+        "ycb_055_baseball",          # Baseball
+        "ycb_056_tennis_ball",       # Tennis ball
+        "ycb_057_racquetball",       # Racquetball
+        "ycb_058_golf_ball",         # Golf ball
+        # "ycb_059_chain",             # Chain
+        "ycb_061_foam_brick",        # Foam brick
+        "ycb_062_dice",              # Dice
+        "ycb_063-a_marbles",         # Marbles
+        "ycb_063-b_marbles",         # Marbles
+        "ycb_065-a_cups",            # Cups
+        "ycb_065-b_cups",            # Cups
+        "ycb_065-c_cups",            # Cups
+        "ycb_065-d_cups",            # Cups
+        "ycb_065-e_cups",            # Cups
+        "ycb_065-f_cups",            # Cups
+        "ycb_065-g_cups",            # Cups
+        "ycb_065-h_cups",            # Cups
+        "ycb_065-i_cups",            # Cups
+        "ycb_065-j_cups"             # Cups
+        # missing: Rope, Credit card blank
+    ]
+}
+
+task_items = {
+    "prefix": "taskitem",
+    "items": [
+        "ycb_070-a_colored_wood_blocks", # Colored wood blocks
+        "ycb_070-b_colored_wood_blocks", # Colored wood blocks
+        "ycb_071_nine_hole_peg_test",    # 9-peg-hole test
+        "ycb_072-a_toy_airplane",        # Toy airplane
+        "ycb_072-b_toy_airplane",        # Toy airplane
+        "ycb_072-c_toy_airplane",        # Toy airplane
+        "ycb_072-d_toy_airplane",        # Toy airplane
+        "ycb_072-e_toy_airplane",        # Toy airplane
+        "ycb_073-a_lego_duplo",          # Lego duplo
+        "ycb_073-b_lego_duplo",          # Lego duplo
+        "ycb_073-c_lego_duplo",          # Lego duplo
+        "ycb_073-d_lego_duplo",          # Lego duplo
+        "ycb_073-e_lego_duplo",          # Lego duplo
+        "ycb_073-f_lego_duplo",          # Lego duplo
+        "ycb_073-g_lego_duplo",          # Lego duplo
+        "ycb_077_rubiks_cube"            # Rubick's cube
+        # missing: Black t-shirt, Timer, Magazine
+    ]
+}
+
+small_items = {
+    "prefix": "smallitem",
+    "items": [
+        "ycb_061_foam_brick",
+        "ycb_062_dice",
+        "ycb_063-a_marbles",
+        "ycb_063-b_marbles",
+        "ycb_070-b_colored_wood_blocks",
+        "ycb_073-a_lego_duplo",
+        "ycb_073-b_lego_duplo",
+        "ycb_073-c_lego_duplo",
+        "ycb_073-d_lego_duplo",
+        "ycb_073-e_lego_duplo",
+        "ycb_073-f_lego_duplo",
+        "ycb_073-g_lego_duplo"
+    ]
+}
+
+
+def generate_scatter(xmin, xmax, ymin, ymax, n, mindist):
+    if n == 0:
+        return []
+    dist = 0
+    b = np.array([xmax, ymax])
+    a = np.array([xmin, ymin])
+    trial = 0
+    bestdist = 0
+    bestX = None
+    while dist < mindist:
+        X = (b - a) * np.random.rand(n, 2) + a
+        dist = np.min(pdist(X))
+        if dist > bestdist:
+            bestdist = dist
+            bestX = X.copy()
+        trial += 1
+        if trial > 1000:
+            break
+    return bestX
+
+
+def drop_object(gazebo_name, name, x, y, z, yaw):
+    rospy.loginfo('Drop {0}'.format(name))
+    initial_pose = Pose()
+    initial_pose.position.x = x
+    initial_pose.position.y = y
+    initial_pose.position.z = z
+    roll = 0.0
+    pitch = 0.0
+    # yaw = math.pi * (random.random() - 0.5)
+    tmpq = tft.quaternion_from_euler(roll, pitch, yaw)
+    q = Quaternion(tmpq[0], tmpq[1], tmpq[2], tmpq[3])
+    initial_pose.orientation = q
+
+    model_xml = model_database_template.replace('MODEL_NAME', name)
+
+    gazebo_interface.spawn_sdf_model_client(gazebo_name, model_xml, rospy.get_namespace(),
+                                            initial_pose, "", "/gazebo")
+
+
+# where to place objects on task1 (give less chance to tall table)
+task1_places = [
+    task1_floor,
+    task1_top_long_table,
+    task1_top_tall_table
+]
+task1_places_choice = [
+    0, 0, 0,
+    1, 1,
+    2
+]
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(
+        description='Drop objects to the WRS field.')
+    parser.add_argument('--seed', nargs='?', type=int, default=False,
+                        help='seed of random variables (default: none)')
+    parser.add_argument('--percategory', nargs='?', type=int, default=6,
+                        help='Number of object per category in task 1 (default: 6)')
+    parser.add_argument('--obstacles', nargs='?', type=int, default=4,
+                        help='Number of obstacles in task 2a (default: 4)')
+    parser.add_argument('--perrow', nargs='?', type=int, default=6,
+                        help='Number of objects per each rows in task 2 (default: 6)')
+
+    args = parser.parse_args(rospy.myargv()[1:])
+
+    if args.seed:
+        random.seed(args.seed)
+        np.random.seed(args.seed)
+
+    rospy.init_node('spawn_objects')
+
+    # drop 6 items from each category (1 is unknown in the actual competition)
+    place_items = []
+    for i in range(len(task1_places)):
+        place_items.append([])
+    for s in [food, kitchen_items, tools, shape_items, task_items]:
+        # shuffle items order
+        s['items'] = random.sample(s['items'], len(s['items']))
+        for i in range(0, args.percategory):
+            place = task1_places_choice[random.randrange(len(task1_places_choice))]
+            place_items[place].append((s['prefix'], s['items'][i % len(s['items'])]))
+    cnt = 1
+    for i in range(len(task1_places)):
+        place = task1_places[i]
+        items = place_items[i]
+        n = len(items)
+        if n > 0:
+            X = generate_scatter(place[0][0], place[1][0], place[0][1], place[1][1], n, 0.2)
+            for j in range(n):
+                yaw = math.pi * (random.random() - 0.5)
+                drop_object('task1_{0}_{1}_{2}'.format(items[j][0], items[j][1], cnt), items[j][1], X[j][0], X[j][1], place[0][2], yaw)
+                cnt += 1
+
+    # drop few small items on the route to room #2
+    s = small_items
+    # shuffle items order
+    s['items'] = random.sample(s['items'], len(s['items']))
+    place = task2a_floor
+    for i in range(args.obstacles):
+        x = random.uniform(place[0][0], place[1][0])
+        y = random.uniform(place[0][1], place[1][1])
+        z = random.uniform(place[0][2], place[1][2])
+        yaw = math.pi * (random.random() - 0.5)
+        drop_object('task2a_{0}'.format(i + 1), s['items'][i % len(s['items'])], x, y, z, yaw)
+
+    # task #2
+    s = food
+    # shuffle items order
+    s['items'] = random.sample(s['items'], len(s['items']))
+    cnt = 1
+    for place in [task2_shelf_plate1, task2_shelf_plate2]:
+        X = generate_scatter(place[0][0], place[1][0], place[0][1], place[1][1], args.perrow, 0.2)
+        for j in range(args.perrow):
+            yaw = 0 # math.pi * (random.random() - 0.5)
+            name = s['items'][(cnt - 1) % len(s['items'])]
+            drop_object('task2_{0}_{1}'.format(cnt, name), name, X[j][0], X[j][1], place[0][2], yaw)
+            cnt += 1
+    rospy.loginfo('Spawn finished')

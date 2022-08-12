@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name='ycb_058_golf_ball'>
+    <link name='body'>
+      <inertial>
+        <mass>0.046</mass>
+        <pose>-0.00652885856019 -0.0304172970954 0.0209265300846 0 0 0</pose>
+        <inertia>
+          <ixx>8.30912102664e-06</ixx>
+          <ixy>-8.04696433085e-10</ixy>
+          <ixz>1.09164678613e-09</ixz>
+          <iyy>8.31517367441e-06</iyy>
+          <iyz>-1.99520248051e-09</iyz>
+          <izz>8.33839495435e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name='ycb_058_golf_ball_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_058_golf_ball/meshes/textured.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='ycb_058_golf_ball_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://ycb_058_golf_ball/meshes/nontextured.stl</uri>
+          </mesh>
+        </geometry>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e15</kp>
+              <kd>1e13</kd>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>
